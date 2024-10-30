@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------header--------------*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+
+.main-header {
+    width: 100%;
+}
+
+.search-icon-wrapper {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    z-index: 1100;
+    min-width: 5rem;
+    height: auto;
+}
+
+.bs-search {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.search-modal {
+    z-index: 1070 !important;
+    /* Ensure it is higher than header and uses the !important rule to take precedence */
+}
+
+.search-modal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.search-bar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    gap: 10px;
+}
+
+.loading-container span {
+    font-size: 1.2rem;
+}
+
+.no-result-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+
+.search-results {
+    padding: 10px 0;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e9ecef;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f1f3f5;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.bs-cart {
+    font-size: 1.8rem;
+}
+
+
+.bs-search:hover,
+.bs-cart:hover,
+.home-link:hover {
+    color: #0056b3 !important;
+}
+
+/*-----------------body--------------*/
+
+section {
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+.body {
+    width: 100%;
+    position: relative;
+    margin-top: 37px;
+}
+
+.card-modal {
+    margin-top: 75px;
+}
+
+.main-carousel {
+    display: flex;
+    height: 400px;
+}
+
+.carousel-img-container {
+    flex: 1;
+    background-image: url("../src/images/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #443377, #0040aa);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.products-container {
+    padding: 2rem;
+}
+
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+
+.product-image {
+    object-fit: contain;
+    /* Ensures the image covers the container */
+    height: 200px;
+    padding: 20px;
+}
+
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.product-price-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-old-price {
+    text-decoration: line-through;
+    font-size: clamp(1.0rem, 2.5vw, 1.4rem);
+    /* Adjusts relative to viewport width */
+    font-weight: 500;
+    color: gray;
+}
+
+
+.product-price {
+    font-size: clamp(1.0rem, 2.5vw, 1.4rem);
+    /* Adjusts relative to viewport width */
+    font-weight: 500;
+    color: #007bff;
+}
+
+.error-message,
+.loading-message {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.promo-banner {
+    background: linear-gradient(90deg, #8866EE, #007bff);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.promo-discount {
+    color: #ffcc00;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.custom-modal .modal-dialog {
+    max-width: 800px;
+}
+
+.product-title-modal {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.product-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    text-align: center;
+}
+
+
+.product-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.product-description.collapsed {
+    max-height: 0;
+}
+
+.toggle-description-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.toggle-description-wrapper span {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #39546e;
+}
+
+.toggle-description-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-description-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+}
